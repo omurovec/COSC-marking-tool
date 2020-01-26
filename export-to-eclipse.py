@@ -7,6 +7,7 @@ import shutil
 PACKAGE_PATH = "P:/PATH/TO/PROJECT/SRC/"
 GRADEBOOK_CSV_PATH = "P:/PATH/TO/CSV.csv"
 LAB_SECTIONS = ["L2M", "L2N"]
+SUBMISSIONS_PATH = "Submissions.zip"
 
 # Add/replace package name in java file
 
@@ -78,7 +79,7 @@ def extract_move(ID, assign_name, section, zip):
 
 
 # Extract download from canvas
-with ZipFile("Submissions.zip", 'r') as zip:
+with ZipFile(SUBMISSIONS_PATH, 'r') as zip:
     zip.extractall()
 
 
